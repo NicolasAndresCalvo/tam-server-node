@@ -1,0 +1,14 @@
+{
+  "name": "devops-technical-assessment",
+  "version": "1.0.0",
+  "description": "Small Node HTTP server for the DevOps / Platform Engineer technical validation.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

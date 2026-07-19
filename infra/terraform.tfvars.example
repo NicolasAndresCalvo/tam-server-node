@@ -1,0 +1,22 @@
+# Copy to terraform.tfvars and adjust for a local apply. terraform.tfvars is
+# gitignored. For the committed prod config the pipeline uses, see prod.auto.tfvars.
+
+aws_region   = "eu-west-1"
+project_name = "tam-server-node"
+environment  = "prod"
+
+# Scaling
+desired_count = 2
+task_cpu      = 256
+task_memory   = 512
+
+# CI/CD OIDC: set to your fork, e.g. "NicolasAndresCalvo/tam-server-node"
+github_repo = ""
+
+# TLS (optional). Leave both empty for plain HTTP on the ALB DNS name.
+# Set both to enable ACM + HTTPS:443 with HTTP->HTTPS redirect.
+# domain_name     = "tam.example.com"
+# route53_zone_id = "Z0123456789ABCDEFGHIJ"
+
+# CD overrides this per deploy; leave as bootstrap for the first apply.
+# image_tag = "bootstrap"
